@@ -23,7 +23,7 @@ app.layout = html.Div([
 )
 def update_graph(n):
     global history_df
-    response = requests.get("http://localhost:5050/iot-data")
+    response = requests.get("https://iot-dashboard-simulator.onrender.com//iot-data")
     if response.status_code == 200:
         data = response.json()
         new_df = pd.DataFrame([data])
